@@ -50,7 +50,7 @@ def check():
     #        f"ayar last: {ayar_data.last_price}"
 
 @app.route("/nesbat")
-def check():
+def nesbat():
     ayar = tse.Ticker("عیار")
     gohar = tse.Ticker("گوهر")
     mes = tse.Ticker("مثقال")
