@@ -1,0 +1,21 @@
+body {
+    background-color: rgba(39, 55, 77, 0.8);
+    font-family: Vazirmatn, sans-serif;
+}
+.table1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    /* Optional: Set a maximum width for the form */
+    padding: 5px;
+    border-radius: 20px;
+}
+.tab2 {
+    border-radius: 20px;
+}
+.f-1 {
+    text-align: center;
+}
