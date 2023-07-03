@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        body {
+            background-color: rgba(39, 55, 77, 0.8);
+            font-family: Vazirmatn, sans-serif;
+        }
 
+        .table1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            /* Optional: Set a maximum width for the form */
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .tab2 {
+            border-radius: 20px;
+        }
+
+        .f-1 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,8 +46,6 @@
                     <th scope="col">نام سهم</th>
                     <th scope="col">قیمت فروش</th>
                     <th scope="col">قیمت خرید</th>
-
-                    <th scope="col" style="text-align: center;">نسبت به سکه رفاه</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,7 +54,6 @@
                     <td class="f-1" style="color: rgb(6, 255, 6);">{{ ayar_data.best_supply_price }}</td>
                     <td class="f-1" style="color: red">{{ ayar_data.best_demand_price }}</td>
 
-                    <td>{{ seker_data.best_demand_price / ayar_data.best_demand_price }}</td>
                 </tr>
                 <tr>
                     <th scope="row" class="f-1">گوهر</th>
@@ -42,8 +65,6 @@
                     <th scope="row" class="f-1">مثقال</th>
                     <td class="f-1" style="color: rgb(6, 255, 6);">{{ mes_data.best_supply_price }}</td>
                     <td class="f-1" style="color: red">{{ mes_data.best_demand_price }}</td>
-                    <td style="text-align: center;">{{ nesbat_ms }}</td>
-
 
                 </tr>
                 <tr>
@@ -68,7 +89,7 @@
                     <th scope="row" class="f-1">سکه رفاه</th>
                     <td class="f-1" style="color: rgb(6, 255, 6);">{{ seker_data.best_supply_price }}</td>
                     <td class="f-1" style="color: red">{{ seker_data.best_demand_price }}</td>
- 
+
                 </tr>
                 <tr>
                     <th scope="row" class="f-1">سکه آینده</th>
